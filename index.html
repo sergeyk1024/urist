@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="multilang">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лучшие Юристы Днепра</title>
+  <style>
+    body {
+      background-image: url("имя_вашего_файла.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <div id="lang-ru">
+    <h1>Лучшие Юристы Днепра</h1>
+  </div>
+  <div id="lang-uk" style="display: none;">
+    <h1>Найкращі Юристи Дніпра</h1>
+  </div>
+
+  <select id="language" onchange="changeLanguage()">
+    <option value="ru" selected>Русский</option>
+    <option value="uk">Українська</option>
+  </select>
+  
+  <script>
+    function changeLanguage() {
+      var language = document.getElementById('language').value;
+      if (language == 'uk') {
+        document.getElementById('lang-ru').style.display = 'none';
+        document.getElementById('lang-uk').style.display = 'block';
+      } 
+      else {
+        document.getElementById('lang-ru').style.display = 'block';
+        document.getElementById('lang-uk').style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
