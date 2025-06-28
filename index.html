@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лучшие Юристы Днепра</title>
+  <title>Best Lawyers in Dnipro</title>
   <style>
     body {
       background-image: url("f.jpg");
@@ -20,10 +20,22 @@
     h1 {
       font-size: 2.5em;
     }
-    #language {
+    #buttons {
       position: absolute;
       top: 10px;
       right: 10px;
+    }
+    .language-button {
+      margin-left: 10px;
+      cursor: pointer;
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -35,15 +47,14 @@
     <h1>Найкращі Юристи Дніпра</h1>
   </div>
 
-  <select id="language" onchange="changeLanguage()">
-    <option value="ru" selected>Русский</option>
-    <option value="uk">Українська</option>
-  </select>
+  <div id="buttons">
+    <button class="language-button" onclick="changeLanguage('ru')">Русский</button>
+    <button class="language-button" onclick="changeLanguage('uk')">Українська</button>
+  </div>
   
   <script>
-    function changeLanguage() {
-      var language = document.getElementById('language').value;
-      if (language == 'uk') {
+    function changeLanguage(lang) {
+      if (lang == 'uk') {
         document.getElementById('lang-ru').style.display = 'none';
         document.getElementById('lang-uk').style.display = 'block';
       } 
